@@ -75,6 +75,7 @@ namespace GrpcLomba.Services
 
             foreach (var cust in customers) 
             {
+               /* await Task.Delay(1000);*/
                 await responseStream.WriteAsync(cust);
             }
         }

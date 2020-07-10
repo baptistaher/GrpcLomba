@@ -10,17 +10,17 @@ namespace GrpcClient
     {
         static async Task Main(string[] args)
         {
-            /*   var input = new HelloRequest { Name = "Fred" };
+               var input = new HelloRequest { Name = "Fred" };
 
                var channel = GrpcChannel.ForAddress("https://localhost:5001");
                var client = new Greeter.GreeterClient(channel);
 
                var reply = await client.SayHelloAsync(input);
 
-               Console.WriteLine(reply.Message);*/
+               Console.WriteLine(reply.Message);
 
 
-            var channel = GrpcChannel.ForAddress("https://localhost:5001");
+             channel = GrpcChannel.ForAddress("https://localhost:5001");
             var customerClient = new Customer.CustomerClient(channel);
 
 
@@ -44,7 +44,7 @@ namespace GrpcClient
                     Console.WriteLine($"{currentCustomer.FirstName} { currentCustomer.LastName } {currentCustomer.EmailAdress}");
                 }
 
-
+                
             }
 
 
